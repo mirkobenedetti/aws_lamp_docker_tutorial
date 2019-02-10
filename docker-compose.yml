@@ -1,0 +1,12 @@
+version: '3'
+services:
+  lamp:
+    image: 000000000000.dkr.ecr.eu-central-1.amazonaws.com/aws_lamp_tutorial
+    ports:
+      - "80:80"
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: lamp-tutorial
+        awslogs-region: eu-central-1
+        awslogs-stream-prefix: lamp
